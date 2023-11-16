@@ -6,7 +6,7 @@
     <item android:icon="@drawable/ic_favoriate"
         android:title="Favoriate"
         android:id="@+id/favoriate_fragment"/>
-    <item android:icon="@drawable/ic_favoriate"
+    <item android:icon="@drawable/ic_category"
         android:title="Categories"
         android:id="@+id/categoriesFragment"/>
 </menu>
