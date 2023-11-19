@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
 import com.example.foodappcleanarchitecutre.R
+import dagger.hilt.EntryPoint
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class FavoriateFragment : Fragment() {
     // TODO: Rename and change types of parameters
 

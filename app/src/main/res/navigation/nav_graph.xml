@@ -22,7 +22,12 @@
         tools:layout="@layout/fragment_categories" />
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.foodappcleanarchitecutre.SearchFragment"
+        android:name="com.example.foodappcleanarchitecutre.fragments.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/networkErrorFragment"
+        android:name="com.example.foodappcleanarchitecutre.NetworkErrorFragment"
+        android:label="fragment_network_error"
+        tools:layout="@layout/fragment_network_error" />
 </navigation>

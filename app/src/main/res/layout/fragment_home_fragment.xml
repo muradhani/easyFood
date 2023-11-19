@@ -6,33 +6,55 @@
     <data>
 
     </data>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.HomeFragment">
+        android:orientation="vertical"
+        android:background="@color/white">
 
-        <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.google.android.material.appbar.AppBarLayout
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar"
+            android:layout_marginHorizontal="@dimen/_10sdp">
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/topAppBar"
-                android:layout_width="match_parent"
+            <!-- Your ConstraintLayout content goes here -->
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minHeight="?attr/actionBarSize"
-                app:title="Home"
-                style="@style/AppTheme"
-                app:titleTextAppearance="@style/ActionBar.nameText"
-                app:menu="@menu/app_bar" />
+                android:text="what would you like to eat ?"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"
+                android:layout_marginVertical="@dimen/_10sdp"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/tv_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:elevation="@dimen/_30sdp"
+                app:cardCornerRadius="@dimen/_10sdp">
+                <ImageView
+                    android:id="@+id/iv_first_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
